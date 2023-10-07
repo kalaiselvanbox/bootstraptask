@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="icon" type="image/x-icon" href="./image/logo_removed_background.png">
+    <title>Kalaivani Dragon fruit farm</title>
+</head>
+<style>
+    body {
+        background-color: #e8e3e3;
+    }
+
+    .carousel-inner {
+        height: 100%;
+        background-color: hsla(240, 25%, 60%, 0.333);
+        border-image-source: url('./image/border.png');
+        border-image-repeat: stretch;
+        border-image-slice: 30;
+        border-image-width: 10px;
+        border-image-outset: 10px;
+    }
+
+    .caro {
+        background: linear-gradient(rgba(248, 248, 248, 0.7), rgba(133, 115, 115, 0.7)), url(/image/fbg.jpeg);
+        /* background-image: url(./image/plant5.jpeg); */
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    /* Carousel base class */
+    .carousel {
+        height: 500px;
+    }
+
+    /* Declare heights because of positioning of img element */
+    .carousel .carousel-item {
+        height: 500px;
+        background-color: #777;
+        margin-top: 0px;
+    }
+
+    .carousel-inner>.carousel-item>img {
+        position: relative;
+        top: 0;
+        left: 0;
+        min-width: 100%;
+        min-height: 100%;
+    }
+
+    .fcard {
+        max-width: 300px;
+    }
+
+    input,
+    textarea {
+        background-color: #f8f1f1 !important
+    }
+
+    @media screen and (max-width : 767px) {
+        .carousel {
+            height: 400px;
+        }
+
+        .carousel .carousel-item {
+            height: 400px;
+            background-color: #777;
+            margin-top: 0px;
+        }
+    }
+
+    @media screen and (max-width : 589px) {
+        .carousel {
+            height: 40vh;
+        }
+
+        .carousel .carousel-item {
+            height: 40vh;
+            background-color: #777;
+            margin-top: 0px;
+        }
+    }
+</style>
+
+<body>
+    <div class=".container">
+        <nav class="z-3 navbar position-sticky top-0" style="background: rgb(204, 183, 199)">
+            <div class="container-fluid justify-content-between">
+
+                <a class="navbar-brand" data-bs-toggle="modal" data-bs-target="#myModal"
+                    href="./kalaivanidragonfruitfarmlogo.png">
+                    <img src="./image/logo_removed_background.png" alt="Logo" width="30" height="30"
+                        class="d-inline-block align-text-top">
+                    <span class="text-success-emphasis"><strong>Kalaivani dragon fruit farm</strong></span>
+                </a>
+                <!-- nav item start -->
+                <ul class="nav justify-content-end d-none d-md-flex ">
+                    <li class="nav-item"><a class="nav-link active px-2 text-success-emphasis" aria-current="page"
+                            href="#"><strong>Home</strong></a></li>
+                    <li class="nav-item"><a class="nav-link px-2 text-success-emphasis"
+                            href="#about"><strong>About</strong></a>
+                    </li>
+                    <li class="nav-item dropdown"><a class="nav-link px-2 dropdown-toggle text-success-emphasis"
+                            href="#" role="button" data-bs-toggle="dropdown"
+                            area-expanded="false"><strong>Service</strong></a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item text-success-emphasis" href="#product">Red dragon fruit</a></li>
+                            <li><a class="dropdown-item text-success-emphasis" href="#product">White dragon fruit</a>
+                            </li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item text-success-emphasis" href="#feedback">Service feedback</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link px-2 text-success-emphasis"
+                            href="#product"><strong>product</strong></a></li>
+                    <li class="nav-item"><a class="nav-link px-2 text-success-emphasis"
+                            href="#contact"><strong>contact</strong></a></li>
+                    <li class="nav-item"><a class="nav-link px-2 text-success-emphasis"
+                            href="#login"><strong>login</strong></a>
+                    </li>
+                </ul>
+                <!-- nav item end -->
+
+                <!-- toggle button content start-->
+                <button class="navbar-toggler d-block d-sm-block d-md-none" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+                    aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title text-success" id="offcanvasNavbarLabel">Kalaivani dragon fruit farm
+                        </h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                            <li class="nav-item"><a class="nav-link active px-2" aria-current="page" href="#">Home</a>
+                            </li>
+                            <li class="nav-item"><a class="nav-link px-2" href="#about">About</a></li>
+                            <li class="nav-item dropdown"><a class="nav-link px-2 dropdown-toggle" href="#"
+                                    role="button" data-bs-toggle="dropdown" area-expanded="false">Service</a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#product">Red fruit</a></li>
+                                    <li><a class="dropdown-item" href="#product">White fruit</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="#feedback">Service feedback</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item"><a class="nav-link px-2" href="#product">Product</a></li>
+                            <li class="nav-item"><a class="nav-link px-2" href="#contact">Contact</a></li>
+                            <li class="nav-item"><a class="nav-link px-2" href="#login">Login</a></li>
+                        </ul>
+                        <form class="d-flex mt-3" role="search">
+                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                            <button class="btn btn-outline-success" type="submit">Search</button>
+                        </form>
+                    </div>
+                </div>
+                <!-- toggle button content end-->
+            </div>
+        </nav>
+
+        <!-- The image Modal -->
+        <div class="modal" id="myModal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <h4 class="modal-title text-success ">Kalaivani dragon fruit farm logo</h4>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+
+                    <!-- Modal body -->
+                    <div class="modal-body text-center">
+                        <img src="./kalaivanidragonfruitfarmlogo.png" alt="Logo" width="300" height="300"
+                            class="d-inline-block align-text-center">
+                    </div>
+
+                    <!-- Modal footer -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- The image model end -->
+
+        <!-- Carousel start -->
+        <div class="caro row justify-content-around">
+            <div class="col-lg-6">
+                <div id="carouselExampleIndicators" class="carousel slide">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                            class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                            aria-label="Slide 3"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
+                            aria-label="Slide 4"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4"
+                            aria-label="Slide 5"></button>
+                    </div>
+                    <div class="carousel-inner" data-bs-ride="carousel">
+                        <div class="carousel-item active" data-bs-interval="3000">
+                            <img src="./image/b.webp" class="d-block w-100 " alt="plant image">
+                        </div>
+                        <div class="carousel-item" data-bs-interval="3000">
+                            <img src="./image/bb.webp" class="d-block w-100 " alt="farm image">
+                        </div>
+                        <div class="carousel-item" data-bs-interval="3000">
+                            <img src="./image/bbb.webp" class="d-block w-100 " alt="plant image">
+                        </div>
+                        <div class="carousel-item" data-bs-interval="3000">
+                            <img src="./image/b.webp" class="d-block w-100 " alt="farm image">
+                        </div>
+                        <div class="carousel-item" data-bs-interval="3000">
+                            <img src="./image/bbb.webp" class="d-block w-100 " alt="plant image">
+                        </div>
+
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Carousel end -->
+
+        <!-- About start -->
+        <div class="container">
+            <h1 id="about" class="text-center my-5 text-success">About</h1>
+            <div class="card">
+                <p class="pt-5 px-5"><strong>Kalaivani dragon fruit farm</strong> located in Thiruvannamalai district,
+                    Tamilnadu, India</p>
+                <p class="px-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus possimus iste quam
+                    ipsam veniam exercitationem inventore, enim ullam id earum libero asperiores veritatis harum. Quae
+                    porro quo possimus quaerat natus.
+                    Assumenda, aliquid sed aspernatur laudantium repellendus amet cupiditate vitae maxime tenetur
+                    doloribus est veniam eveniet labore dolores similique minus voluptates corrupti voluptatibus rem
+                    quod delectus pariatur modi officia optio. Repudiandae?
+                    Debitis, non recusandae eaque est quae necessitatibus dolore temporibus, nihil unde eius assumenda
+                    tempora ab consequuntur neque voluptates fugiat rerum ipsum deleniti repudiandae nam at odit?
+                    Dolorum, distinctio! Optio, nemo.0</p>
+                <p class="px-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, blanditiis soluta tempora
+                    saepe est
+                    vitae facere aliquid perferendis? Dolore repellat aspernatur harum porro rem, provident sapiente
+                    enim assumenda aliquam fugit.
+                    Rerum deserunt omnis velit excepturi modi accusantium tenetur in, nihil optio, exercitationem
+                    deleniti? Quibusdam voluptas ducimus soluta excepturi ab reprehenderit fugit? Praesentium ipsum vero
+                    corporis eius iusto eligendi quaerat quam.
+                    Cum, repellat? Quos nam nihil explicabo numquam quasi alias facilis hic quas! Delectus odit
+                    voluptas, itaque dolorum porro natus distinctio perferendis maiores impedit laborum cum consectetur
+                    rerum blanditiis? Inventore, illo.
+                    Voluptatibus ad praesentium amet, non asperiores tempora odio nobis ab nulla ea doloremque dolore
+                    quasi soluta harum iste delectus aliquid atque aut. Cum rem non dicta impedit voluptatibus, veniam
+                    magni?
+                    Et deserunt quidem alias quibusdam, asperiores veniam quisquam sint sapiente odit culpa, ipsum
+                    recusandae autem fuga repellendus sed voluptate placeat, deleniti minus unde qui omnis possimus
+                    obcaecati. Delectus, accusantium sint.
+                    Dignissimos, dicta facilis ratione at architecto laborum sint exercitationem eos deleniti minima
+                    quas modi voluptate cupiditate ipsum maiores quod, atque cumque laudantium eum illum labore animi
+                    magni et delectus! Voluptatibus.
+                    Ad labore inventore in voluptatem saepe beatae quibusdam illum adipisci explicabo maiores ducimus
+                    placeat magnam, harum, eos assumenda dolorum excepturi fugit. Consectetur nobis neque quia totam
+                    quibusdam perferendis mollitia. Ea?
+                    Vero amet delectus eos eaque fuga aliquam incidunt eligendi magnam, ad, iusto quas? Consectetur
+                    eligendi rerum repellat facere possimus deleniti maxime obcaecati pariatur est ipsam, nobis laborum
+                    doloribus iure quae!
+                    Voluptate tenetur provident sit, modi nam ipsam distinctio esse sint tempora in labore beatae
+                    molestiae hic eveniet magni vitae culpa repellendus nihil laborum. Voluptatem quidem vero
+                    necessitatibus error sed distinctio.
+                    Pariatur debitis, omnis a iure officia animi? Sit commodi qui quis, unde consectetur mollitia
+                    molestiae ea iusto accusamus sequi! Nesciunt temporibus explicabo cum, minus error doloremque quam a
+                    eius. Omnis.</p>
+            </div>
+        </div>
+        <!-- About end -->
+
+        <!-- Product start -->
+        <div class="container-fluid mt-5">
+            <h1 id="product" class="text-center my-4  text-success">Product</h1>
+            <div class="row">
+                <div class="col-sm-12 col-md-4 col-lg-6">
+                    <div class="container-fluid text-center">
+                        <div class="row">
+                            <div class="col-12 col-sm-6 col-md-12 col-lg-6 mt-2 align-self-center">
+                                <img class="rounded " src="./image/f1.jpeg" width="98%" alt="img1">
+                            </div>
+                            <div class="col-12 col-sm-6 col-md-12 col-lg-6 mt-2 align-self-center">
+                                <img class="rounded" src="./image/f2.jpeg" width="98%" alt="img2">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 col-sm-6 col-md-12 col-lg-6 mt-2 align-self-center">
+                                <img class="rounded" src="./image/f3.jpeg" width="98%" alt="img3">
+                            </div>
+                            <div class="col-12 col-sm-6 col-md-12 col-lg-6 mt-2 align-self-center">
+                                <img class="rounded" src="./image/f2.jpeg" width="98%" alt="img4">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-8 col-lg-6">
+                    <div class="card mt-2">
+                        <p class="px-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio consectetur
+                            praesentium tempore modi quidem itaque sapiente, magnam ipsam voluptates quasi facilis iure
+                            enim quos, ab neque? Distinctio suscipit veniam laboriosam.
+                            Aliquam asperiores cupiditate distinctio? Earum tempora error veritatis placeat quas
+                            voluptate asperiores a possimus nam obcaecati id, maxime, nulla, quasi quibusdam
+                            exercitationem odit nihil distinctio odio! Modi tempore eveniet ullam?
+                            Deleniti quo accusantium reprehenderit, explicabo ex id cum iste doloribus fugiat labore.
+                            Commodi asperiores reprehenderit rerum eius unde, cumque, cum qui ipsum debitis nemo
+                            deleniti, sequi animi repellat vitae ipsa?
+                            Deleniti provident quod sint? Atque ut commodi esse officiis deleniti perferendis,
+                            doloremque autem sequi voluptatem delectus quam a alias, est eveniet recusandae distinctio
+                            culpa minus! Quis nobis inventore cupiditate excepturi?
+                            Repudiandae vitae, itaque impedit laborum eum quis laboriosam officiis tempora soluta
+                            dolores, ipsam sed laudantium repellat veniam enim corporis cum beatae? Possimus ipsam
+                            laboriosam mollitia iste numquam rem, doloribus voluptate!
+                            Consectetur commodi animi incidunt fuga error ipsum, doloribus dicta quae quis dignissimos
+                            aut, maxime voluptates magnam, quisquam officia provident adipisci aperiam accusantium
+                            aut, maxime voluptates magnam, quisquam officia provident adipisci aperiam accusantium
+                            aut, maxime voluptates magnam, quisquam officia provident adipisci aperiam accusantium
+                            aut, maxime voluptates magnam, quisquam officia provident adipisci aperiam accusantium
+                            perferendis!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Product end -->
+
+        <!-- Feedback start -->
+        <h1 id="feedback" class="text-center my-5  text-success">Feedback</h1>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 col-lg-3 mt-2 mx-5 mx-sm-0">
+                    <div class="fcard card text-center" style="width: 100%">
+                        <img src="./image/p1.jpeg" class="rounded-circle align-self-center mt-3" width="100px"
+                            height="100px" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Balaji</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                                of the card's
+                                content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-lg-3  mt-2 mx-5 mx-sm-0">
+                    <div class="fcard card text-center" style="width: 100%">
+                        <img src="./image/p2.jpeg" class="rounded-circle align-self-center mt-3" width="100px"
+                            height="100px" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Kalaiselvi</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                                of the card's
+                                content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-lg-3 mt-2  mx-5 mx-sm-0">
+                    <div class="fcard card text-center" style="width: 100%">
+                        <img src="./image/p3.jpeg" class="rounded-circle align-self-center mt-3" width="100px"
+                            height="100px" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Akash</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                                of the card's
+                                content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-lg-3 mt-2  mx-5 mx-sm-0">
+                    <div class="fcard card text-center" style="width: 100%">
+                        <img src="./image/p4.jpeg" class="rounded-circle align-self-center mt-3" width="100px"
+                            height="100px" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">surya</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                                of the card's
+                                content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Feedback end -->
+        <!-- Contact start -->
+        <h1 id="contact" class="text-center my-5  text-success">Contact</h1>
+        <div class="container">
+            <div class="row justify-content-around">
+                <div class="col-md-6">
+                    <div class="card p-5 bg-success-subtle mb-5">
+                        <form>
+                            <div class="mb-3">
+                                <label for="exampleInputEmail1" class="form-label">Email address</label>
+                                <input type="email" class="form-control" id="exampleInputEmail1"
+                                    aria-describedby="emailHelp">
+                                <!-- <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> -->
+                            </div>
+                            <div class="mb-3">
+                                <label for="floatingTextarea" class="form-label">Message</label>
+                                <textarea class="form-control" placeholder="Leave a message here"
+                                    id="floatingTextarea"></textarea>
+                            </div>
+                            <button class="btn btn-primary">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4 mx-5 mx-sm-0">
+                    <h3 class="text-warning-emphasis">Office address</h3>
+                    <address>
+                        No: 345, Koil street, </br>
+                        Durga post,</br>
+                        Sen taluk,</br>
+                        Thiru district,</br>
+                        PIN : 600 005 </br>
+                        Phone : + 91 44 437438
+                    </address>
+                </div>
+                <div class="col-sm-4  mx-5 mx-sm-0">
+                    <h3 class=" text-warning-emphasis">Farm address</h3>
+                    <address>
+                        No: 345, Koil street, </br>
+                        Durga post,</br>
+                        Sen taluk,</br>
+                        Thiru district,</br>
+                        PIN : 600 005 </br>
+                        Phone : + 91 44 437438
+                    </address>
+                </div>
+                <div class="col-sm-4  mx-5 mx-sm-0">
+                    <h3 class=" text-warning-emphasis">Dealer address</h3>
+                    <address>
+                        No: 345, Koil street, </br>
+                        Durga post,</br>
+                        Sen taluk,</br>
+                        Thiru district,</br>
+                        PIN : 600 005 </br>
+                        Phone : + 91 44 437438
+                    </address>
+                </div>
+            </div>
+        </div>
+        <!-- Contact end -->
+
+        <!-- Login start -->
+        <h1 id="login" class="text-center my-5  text-success">Login</h1>
+        <div class="container">
+            <div class="row justify-content-around">
+                <div class="col-md-6">
+                    <div class="card p-5 mb-5" style="background: #e4dbdb;">
+                        <form>
+                            <div class="mb-3">
+                                <label for="exampleInputEmail1" class="form-label">Email address</label>
+                                <input type="email" class="form-control" id="exampleInputEmail1"
+                                    aria-describedby="emailHelp">
+                                <div id="emailHelp" class="form-text">We'll never share your email with anyone else.
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleInputPassword1" class="form-label">Password</label>
+                                <input type="password" class="form-control" id="exampleInputPassword1">
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleInputPassword2" class="form-label">Conform Password</label>
+                                <input type="password" class="form-control" id="exampleInputPassword2">
+                            </div>
+                            <div class="mb-3 form-check">
+                                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                <label class="form-check-label" for="exampleCheck1"><a href="#login">agree with
+                                        guidlines</a></label>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Login end -->
+
+        <!-- container end -->
+    </div>
+
+
+    <!-- Footer start -->
+
+    <footer class="bd-footer py-4 py-md-5 mt-5 bg-body-tertiary">
+        <div class="container py-4 py-md-5 px-4 px-md-3 text-body-secondary">
+            <div class="row">
+                <div class="col-lg-3 mb-3">
+                    <a class="d-inline-flex align-items-center mb-2 text-body-emphasis text-decoration-none" href="/"
+                        aria-label="Bootstrap">
+                        <span class="fs-5">Kalaivani dragon fruit farm</span>
+                    </a>
+                    <ul class="list-unstyled small">
+                        <li class="mb-2">Kalaivani dragon fruit farm located in Thiruvannamalai district, Tamilnadu,
+                            India</li>
+                        <li class="mb-2">licensed, and certified farm</li>
+                        <li class="mb-2">Currently 2 year old plant</li>
+                    </ul>
+                </div>
+                <div class="col-6 col-lg-2 offset-lg-1 mb-3">
+                    <h5>Links</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2">Home</li>
+                        <li class="mb-2">Docs</li>
+                        <li class="mb-2">Examples</li>
+                        <li class="mb-2">Icons</li>
+                        <li class="mb-2">Themes</li>
+                        <li class="mb-2">Blog</li>
+                        <li class="mb-2">Swag Store</li>
+                    </ul>
+                </div>
+                <div class="col-6 col-lg-2 mb-3">
+                    <h5>Guides</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2">Getting started</li>
+                        <li class="mb-2">tarter template</li>
+                        <li class="mb-2">Webpack</li>
+                        <li class="mb-2">Parcel</li>
+                        <li class="mb-2">Vite</li>
+                    </ul>
+                </div>
+                <div class="col-6 col-lg-2 mb-3">
+                    <h5>Projects</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2">Bootstrap 5</li>
+                        <li class="mb-2">Bootstrap 4</li>
+                        <li class="mb-2">
+                            Icons</li>
+                        <li class="mb-2">RFS</li>
+                        <li class="mb-2">Examples
+                            repo</li>
+                    </ul>
+                </div>
+                <div class="col-6 col-lg-2 mb-3">
+                    <h5>Community</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2">Issues</li>
+                        <li class="mb-2">Discussions</li>
+                        <li class="mb-2">sponsors</li>
+                        <li class="mb-2">Collective</li>
+                        <li class="mb-2">Stack Overflo</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer end -->
+    <div class="position-relative">
+        <div class="position-fixed bottom-0 end-0"><a href="#"><img src="./image/arrow-removebg-preview.png" alt="arrow"
+                    height="30px" width="30px"></a></div>
+    </div>
+    <!-- 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
